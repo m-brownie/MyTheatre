@@ -1,0 +1,21 @@
+body {
+  margin:0;
+  padding:0;
+  background: url(image/bg.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+
+#page_title {
+  margin-top: 50px;
+  font-size: 50px;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background-color: Black;
+  z-index: 1;
+  /* These three lines are for transparency in all browsers. */
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+  filter: alpha(opacity=50);
+  opacity: .5
+}

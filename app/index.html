@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myTheatreApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My Theatre</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-controller="MyTheatreCtrl" ng-style="{'background-image': 'url(' + backgroundImage + ')'}">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div id="page_title">My Theatre</div>
+    <div>
+
+      <table>
+        <tr ng-repeat="movie in movies">
+          <td><img src="{{ configImagePoster + movie.poster_path }}" /></td>
+          <td class="movie_title">{{ movie.original_title }}</td>
+          <td class="movie_release_date">{{ movie.release_date }}</td>
+          <td class="movie_overview">{{ movie.overview }}</td>
+          <!--<td><img src="{{ configImageBackdrop + movie.backdrop_path }}" /></td>-->
+        </tr>
+      </table>
+    
+    </div>
+
+    <!-- inclusions -->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/MyTheatreCtrl.js"></script>
+    <script src="scripts/services/services.js"></script>
+</body>
+</html>
