@@ -4,7 +4,7 @@ angular.module('myTheatreApp')
     var myTheatreFactory = {};    
         
     var urlBase = 'https://api.themoviedb.org/3/';
-    var apiKey = '?api_key=8918f340bddbe963dd421f52011e267f';
+    var apiKey = '?api_key=########################';
     var jsonp = '&callback=JSON_CALLBACK';
 
     return {
