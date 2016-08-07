@@ -1,5 +1,5 @@
 angular.module('myTheatreApp')
-    .factory('myTheatreFactory', ['$http', function ($http) {
+    .factory('myTheatreMoviesFactory', ['$http', function ($http) {
 
     var myTheatreFactory = {};    
         

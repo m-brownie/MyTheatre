@@ -14,17 +14,20 @@
     <![endif]-->
     
     <div id="page_title">My Theatre</div>
+
+    <div id="menu">
+      <ul>
+        <li ng-repeat="menu in menus" ng-class="navClass('{{link.title}}')">
+          <a href="{{ menu.link }}" class="sliding-middle-out">{{ menu.title }}</a>
+        </li>
+        <!--<li><a href="#movies" class="sliding-middle-out">Cinéma</a></li>
+        <li><a href="#shows" class="sliding-middle-out">Séries</a></li>-->
+      </ul>
+    </div>
+
     <div>
 
-      <table>
-        <tr ng-repeat="movie in movies">
-          <td><img src="{{ configImagePoster + movie.poster_path }}" /></td>
-          <td class="movie_title">{{ movie.original_title }}</td>
-          <td class="movie_release_date">{{ movie.release_date }}</td>
-          <td class="movie_overview">{{ movie.overview }}</td>
-          <!--<td><img src="{{ configImageBackdrop + movie.backdrop_path }}" /></td>-->
-        </tr>
-      </table>
+      <div ng-view></div>
     
     </div>
 
@@ -33,6 +36,8 @@
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/MyTheatreCtrl.js"></script>
-    <script src="scripts/services/services.js"></script>
+    <script src="scripts/controllers/ShowsCtrl.js"></script>
+    <script src="scripts/controllers/MoviesCtrl.js"></script>
+    <script src="scripts/services/MovieServices.js"></script>
 </body>
 </html>

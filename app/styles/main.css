@@ -19,3 +19,57 @@ body {
   filter: alpha(opacity=50);
   opacity: .5
 }
+
+/* Menu */
+#menu {
+  padding: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: Arial;
+  font-size: 40px;
+  opacity: .4;
+}
+
+ul {
+    /*list-style-type: none;*/
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+    list-style: none;
+}
+
+#menu a {
+    display: inline-block;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    opacity: .5;
+}
+
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: white;
+}
